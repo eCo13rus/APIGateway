@@ -1,0 +1,157 @@
+/* Переменные */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --hover-color: #2980b9;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* Базовые стили */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+/* Контейнер в Bootstrap уже есть, но можно настроить */
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+/* Шапка */
+.header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Форма поиска */
+#search-form input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+}
+
+#search-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search-form button {
+    border: none;
+}
+
+/* Состояние загрузки */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Карточка новости */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color) !important;
+}
+
+.card-title a {
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+
+.card-title a:hover {
+    color: var(--hover-color);
+}
+
+/* Кнопка читать полностью */
+.read-more-btn {
+    color: var(--secondary-color) !important;
+    text-decoration: none;
+    padding: 0;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.read-more-btn:hover {
+    color: var(--hover-color) !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .header .row > div:first-child {
+        margin-bottom: 15px;
+    }
+}
+
+/* Добавляем к существующим стилям */
+
+/* Модальное окно комментариев */
+.modal-dialog {
+    max-width: 700px;
+}
+
+/* Стили для комментариев */
+.comments-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.comment-item {
+    transition: background-color 0.2s;
+}
+
+.comment-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.comment-item:first-child {
+    border-top: none;
+}
+
+.comment-content p {
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для формы комментариев */
+.add-comment-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Кнопка комментариев */
+.comments-btn {
+    transition: all 0.2s;
+}
+
+.comments-btn:hover {
+    transform: translateY(-2px);
+}
+
+.comments-btn i {
+    margin-right: 5px;
+}

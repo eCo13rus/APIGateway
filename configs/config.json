@@ -1,0 +1,11 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": "8080"
+  },
+  "services": {
+    "news_service_url": "http://localhost:8081",
+    "comment_service_url": "http://localhost:8082",
+    "censor_service_url": "http://localhost:8083"
+  }
+}
